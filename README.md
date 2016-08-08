@@ -27,9 +27,7 @@ To install python3 for CentOs (not in repo):
     sudo python3 -m pip install goooglemaps  
     
 To install it for windows :
-
-  - Install python3 installer (https://www.python.org/downloads/)
-  all goooglemaps  all goooglemaps  
-    From administrator command line type
-    sudo python3 -m pip install goooglemaps
+    - Install python3 installer (https://www.python.org/downloads/)
+    - In administrator command line, type :
+        python3 -m pip install goooglemaps  
 
