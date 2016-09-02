@@ -54,11 +54,11 @@ To install it for windows :
 
 Example in set mode :
 
-            python geo_fetcher.py vd_input.csv update_input                                                                   [ROW:0][COL:0]ROUTER[COL:1]eurofiber[COL:2]DC1.RT0180[COL:3]10.31.0.48[COL:4]vel0cirapt0r[COL:5][COL:6]3044CK[COL:7]ROTTERDAM[COL:8]Nederland
-            [ROW:1][COL:0]ROUTER[COL:1]eurofiber[COL:2]MCR1.RT0180[COL:3]10.31.0.251[COL:4]vel0cirapt0r[COL:5][COL:6]3044CK[COL:7]ROTTERDAM[COL:8]Nederland
-            [ROW:2][COL:0]ROUTER[COL:1]eurofiber[COL:2]PE1.LEDN0070[COL:3]10.31.0.82[COL:4]vel0cirapt0r[COL:5][COL:6]2334CP[COL:7]LEIDEN[COL:8]Nederland
-            [ROW:3][COL:0]ROUTER[COL:1]eurofiber[COL:2]PE1.ZTM0050[COL:3]10.31.0.147[COL:4]vel0cirapt0r[COL:5][COL:6][COL:7][COL:8]
-            [ROW:4][COL:0]ROUTER[COL:1]eurofiber[COL:2]PE1.HVGD0001[COL:3]10.31.0.134[COL:4]vel0cirapt0r[COL:5]Hakgriend[COL:6]3371KA[COL:7]HARDINXVELD GIESSENDAM[COL:8]Nederland
+            python geo_fetcher.py vd_input.csv update_input                                                                   [ROW:0][COL:0]ROUTER[COL:1]customer1[COL:2]RT_0102[COL:3]1.1.1.1[COL:4]test[COL:5][COL:6]3044CK[COL:7]ROTTERDAM[COL:8]Nederland
+            [ROW:1][COL:0]ROUTER[COL:1]customer1[COL:2]RT_0103[COL:3]2.2.2.2[COL:4]test[COL:5][COL:6]3044CK[COL:7]ROTTERDAM[COL:8]Nederland
+            [ROW:2][COL:0]ROUTER[COL:1]customer1[COL:2]RT_0104[COL:3]3.3.3.3[COL:4]test[COL:5][COL:6]2334CP[COL:7]LEIDEN[COL:8]Nederland
+            [ROW:3][COL:0]ROUTER[COL:1]customer1[COL:2]RT_0105[COL:3]4.4.4.4[COL:4]test[COL:5][COL:6][COL:7][COL:8]
+            [ROW:4][COL:0]ROUTER[COL:1]customer1[COL:2]RT_0106[COL:3]5.5.5.5[COL:4]test[COL:5]Hakgriend[COL:6]3371KA[COL:7]HARDINXVELD GIESSENDAM[COL:8]Nederland
             
             Please enter column number containing address :
                 Multiple column can be selected using ',' 
