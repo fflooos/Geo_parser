@@ -6,8 +6,7 @@ Retrieve GPS coordinate from list of postal address using Google Maps API
 - [INSTALLATION](#installation)
 - [DESCRIPTION](#description)
 - [OPTIONS](#options)
-- [CONFIGURATION](#configuration)
-- [OUTPUT TEMPLATE](#output-template)
+- [EXAMPLE](#example)
 
 # INSTALLATION
 
@@ -51,4 +50,66 @@ To install it for windows :
             -v, --version  show program's version number and exit
 
 
+# EXAMPLE
 
+Example in set mode :
+
+            python geo_fetcher.py vd_input.csv update_input                                                                   [ROW:0][COL:0]ROUTER[COL:1]eurofiber[COL:2]DC1.RT0180[COL:3]10.31.0.48[COL:4]vel0cirapt0r[COL:5][COL:6]3044CK[COL:7]ROTTERDAM[COL:8]Nederland
+            [ROW:1][COL:0]ROUTER[COL:1]eurofiber[COL:2]MCR1.RT0180[COL:3]10.31.0.251[COL:4]vel0cirapt0r[COL:5][COL:6]3044CK[COL:7]ROTTERDAM[COL:8]Nederland
+            [ROW:2][COL:0]ROUTER[COL:1]eurofiber[COL:2]PE1.LEDN0070[COL:3]10.31.0.82[COL:4]vel0cirapt0r[COL:5][COL:6]2334CP[COL:7]LEIDEN[COL:8]Nederland
+            [ROW:3][COL:0]ROUTER[COL:1]eurofiber[COL:2]PE1.ZTM0050[COL:3]10.31.0.147[COL:4]vel0cirapt0r[COL:5][COL:6][COL:7][COL:8]
+            [ROW:4][COL:0]ROUTER[COL:1]eurofiber[COL:2]PE1.HVGD0001[COL:3]10.31.0.134[COL:4]vel0cirapt0r[COL:5]Hakgriend[COL:6]3371KA[COL:7]HARDINXVELD GIESSENDAM[COL:8]Nederland
+            
+            Please enter column number containing address :
+                Multiple column can be selected using ',' 
+                Best result if address formatted in below format:
+                <street name><street number>, <postcode> <city>, <state>, <country>
+            Column number :5,6,7,8
+            
+            Schema defined:
+            [ 0 ]=>[ 5 ];[ 1 ]=>[ 6 ];[ 2 ]=>[ 7 ];[ 3 ]=>[ 8 ];
+            
+            Sample request test: ,3044CK,ROTTERDAM,
+            :) :) :) :) :)
+            
+            Trying : ) Requesting gmaps location...
+            Location {'lng': 4.4175639, 'lat': 51.9308754}
+            
+            Requesting location for all elements...
+            Request [row:1] :,3044CK,ROTTERDAM,Nederland,
+            Location:  {'lng': 4.418044699999999, 'lat': 51.9323904}
+            Request [row:2] :,3044CK,ROTTERDAM,Nederland,
+            Location:  {'lng': 4.418044699999999, 'lat': 51.9323904}
+            Request [row:3] :,2334CP,LEIDEN,Nederland,
+            Location:  {'lng': 4.482279999999999, 'lat': 52.1721689}
+            Request [row:4] :,,,,
+            Location: <Not found>
+            Request [row:5] :Hakgriend,3371KA,HARDINXVELD GIESSENDAM,Nederland,
+            Location:  {'lng': 4.8488904, 'lat': 51.82492689999999}
+            Request [row:6] :,3044CK,ROTTERDAM,Nederland,
+            Location:  {'lng': 4.418044699999999, 'lat': 51.9323904}
+            Request [row:7] :sumatralaan,1217GP,HILVERSUM,Nederland,
+            Location:  {'lng': 5.1724751, 'lat': 52.2359787}
+            Request [row:8] :morsestraat,4004JP,TIEL,Nederland
+            [...]
+
+Example in batch mode :
+
+        python geo_fetcher.py vd_input.csv update_input "5,6,7,8"
+            Request [row:1] :,3044CK,ROTTERDAM,Nederland,
+            Location:  {'lng': 4.418044699999999, 'lat': 51.9323904}
+            Request [row:2] :,3044CK,ROTTERDAM,Nederland,
+            Location:  {'lng': 4.418044699999999, 'lat': 51.9323904}
+            Request [row:3] :,2334CP,LEIDEN,Nederland,
+            Location:  {'lng': 4.482279999999999, 'lat': 52.1721689}
+            Request [row:4] :,,,,
+            Location: <Not found>
+            Request [row:5] :Hakgriend,3371KA,HARDINXVELD GIESSENDAM,Nederland,
+            Location:  {'lng': 4.8488904, 'lat': 51.82492689999999}
+            Request [row:6] :,3044CK,ROTTERDAM,Nederland,
+            Location:  {'lng': 4.418044699999999, 'lat': 51.9323904}
+            Request [row:7] :sumatralaan,1217GP,HILVERSUM,Nederland,
+            [...]
+            
+
+        
