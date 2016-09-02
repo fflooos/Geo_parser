@@ -37,3 +37,18 @@ To install it for windows :
     In administrator command line, type :
     -> <PYTHON BIN PATH>\python3 -m pip install goooglemaps  
     
+# OPTIONS
+
+    usage: geo_fetcher.py [-h] [-d] [-v] input_file output_file [set]
+        Retrieve GPS coordinated from gMaps using post address from input file
+        positional arguments:
+            input_file     input file
+            output_file    output file
+            set            List of columns containing postal address separated by ',' (Ex: "3,4,5")
+        optional arguments:
+            -h, --help     show this help message and exit
+            -d, --debug    Enable debugging information
+            -v, --version  show program's version number and exit
+
+
+
